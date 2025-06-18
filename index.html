@@ -49,7 +49,7 @@
                     t_ul.classList.add("todo-ul");
                     t_div.appendChild(t_ul);
 
-                    // Create li for the ul
+                    // userId. Create li for the ul
                     const t_li_userId = document.createElement("li");
                     t_li_userId.classList.add("todo-li");
                     t_ul.appendChild(t_li_userId);
@@ -57,6 +57,33 @@
                     const p_userId = document.createElement("p");
                     p_userId.innerText = todo.userId;
                     t_li_userId.appendChild(p_userId);
+
+                    // id. Create li for the ul
+                    const t_li_id = document.createElement("li");
+                    t_li_id.classList.add("todo-li");
+                    t_ul.appendChild(t_li_id);
+                    // Put p in the li
+                    const p_id = document.createElement("p");
+                    p_id.innerText = todo.id;
+                    t_li_id.appendChild(p_id);
+
+                    // title. Create li for the ul
+                    const t_li_title = document.createElement("li");
+                    t_li_title.classList.add("todo-li");
+                    t_ul.appendChild(t_li_title);
+                    // Put p in the li
+                    const p_title = document.createElement("p");
+                    p_title.innerText = todo.title;
+                    t_li_title.appendChild(p_title);
+
+                    // completed. Create li for the ul
+                    const t_li_completed = document.createElement("li");
+                    t_li_completed.classList.add("todo-li");
+                    t_ul.appendChild(t_li_completed);
+                    // Put p in the li
+                    const p_completed = document.createElement("p");
+                    p_completed.innerText = todo.completed;
+                    t_li_completed.appendChild(p_completed);
 
 
                     // Put the div in body

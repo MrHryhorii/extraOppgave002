@@ -9,3 +9,12 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.todo-ul{
+    display: flex;
+}
+
+.todo-li{
+    margin-left: 20px;
+    margin-right: 20px;
+}
