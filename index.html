@@ -68,18 +68,22 @@
                     todo_table.appendChild(table_row);
                     //
                     const todo_td_userId = document.createElement("td");
+                    todo_td_userId.classList.add("userId-td");
                     todo_td_userId.innerText = todo.userId;
                     table_row.appendChild(todo_td_userId);
                     //
-                    const todo_td_id = document.createElement("th");
+                    const todo_td_id = document.createElement("td");
+                    todo_td_id.classList.add("id-td");
                     todo_td_id.innerText = todo.id;
                     table_row.appendChild(todo_td_id);
                     //
-                    const todo_td_title = document.createElement("th");
+                    const todo_td_title = document.createElement("td");
+                    todo_td_title.classList.add("title-td");
                     todo_td_title.innerText = todo.title;
                     table_row.appendChild(todo_td_title);
                     //
-                    const todo_td_completed = document.createElement("th");
+                    const todo_td_completed = document.createElement("td");
+                    todo_td_completed.classList.add("completed-td");
                     todo_td_completed.innerText = todo.completed;
                     table_row.appendChild(todo_td_completed);
 
