@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>todo test</title>
+    <link rel="icon" href="./img/check-circle.png" type="image/x-icon">
+    <title>Todolion</title>
     <script src="todo.js"></script>
     <script src="dom-manipulation.js"></script>
 </head>
@@ -45,13 +46,13 @@
                 const todo_tr = document.createElement("tr");
                 todo_table.appendChild(todo_tr);
                 //
-                const todo_th_userId = document.createElement("th");
-                todo_th_userId.innerText = "userId";
-                todo_tr.appendChild(todo_th_userId);
-                //
                 const todo_th_id = document.createElement("th");
                 todo_th_id.innerText = "id";
                 todo_tr.appendChild(todo_th_id);
+                //
+                const todo_th_userId = document.createElement("th");
+                todo_th_userId.innerText = "userId";
+                todo_tr.appendChild(todo_th_userId);
                 //
                 const todo_th_title = document.createElement("th");
                 todo_th_title.innerText = "title";
@@ -71,15 +72,15 @@
                     const table_row = document.createElement("tr");
                     todo_table.appendChild(table_row);
                     //
-                    const todo_td_userId = document.createElement("td");
-                    todo_td_userId.classList.add("userId-td");
-                    todo_td_userId.innerText = todo.userId;
-                    table_row.appendChild(todo_td_userId);
-                    //
                     const todo_td_id = document.createElement("td");
                     todo_td_id.classList.add("id-td");
                     todo_td_id.innerText = todo.id;
                     table_row.appendChild(todo_td_id);
+                    //
+                    const todo_td_userId = document.createElement("td");
+                    todo_td_userId.classList.add("userId-td");
+                    todo_td_userId.innerText = todo.userId;
+                    table_row.appendChild(todo_td_userId);
                     //
                     const todo_td_title = document.createElement("td");
                     todo_td_title.classList.add("title-td");

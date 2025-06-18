@@ -6,8 +6,12 @@
 }
 
 body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
     display: flex;
     flex-direction: column;
+
+    background-color:floralwhite;
 }
 
 .userId-td, .id-td, .completed-td, h1{
@@ -21,8 +25,16 @@ h1, table{
 th, td{
     padding: 2px 2px;
     border-bottom: 2px solid darkgray;
+    border-right: 2px solid lightgray;
+}
+
+.completed-td, th:last-of-type{
+    border-right: none;
 }
 
 table{
     margin-bottom: 64px;
+
+    background-color:ghostwhite;
+    border-radius: 10px;
 }
