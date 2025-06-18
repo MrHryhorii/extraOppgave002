@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>todo test</title>
+    <script src="todo.js"></script>
+    <script src="dom-manipulation.js"></script>
+</head>
+
+<body>
+    <script>
+        // This assignment uses fetching from an external API, and DOM manipulation.
+        // The API is https://jsonplaceholder.typicode.com/todos
+        // The API returns a list of todo-entries.
+        // The todo-entries have the following properties:
+        // - id: number
+        // - title: string
+        // - completed: boolean
+        // - userId: number
+        //
+        // Available functions:
+        // - createAndAppendElement(parent, tag, attributes, children)
+        // - clearBodyElement()
+        // - todoList.fetchTodos()
+        // - todoList.todos
+        //
+        // If you are unsure of something, please ask!
+
+        // First, let's clear the body element
+        clearBodyElement();
+
+        // Then, let's fetch the todos
+        todoList.fetchTodos()
+            .then(todos => {
+                // For every todo-entry, we do something
+                for (const todo of todos) {
+                    console.log(todo);
+                    // ... Add the todo-entry to the DOM here!
+
+                    // Create div for todo
+                    const t_div = document.createElement("div");
+                    t_div.classList.add("todo-div");
+
+                    // Create ul in the div
+                    const t_ul = document.createElement("ul");
+                    t_ul.classList.add("todo-ul");
+                    t_div.appendChild(t_ul);
+
+                    // Create li for the ul
+                    const t_li_userId = document.createElement("li");
+                    t_li_userId.classList.add("todo-li");
+                    t_ul.appendChild(t_li_userId);
+                    // Put p in the li
+                    const p_userId = document.createElement("p");
+                    p_userId.innerText = todo.userId;
+                    t_li_userId.appendChild(p_userId);
+
+
+                    // Put the div in body
+                    document.body.appendChild(t_div);
+
+                    /*
+                    const para = document.createElement("p");
+                    para.innerText = todo.title;
+                    document.body.appendChild(para);
+                    */
+                }
+            })
+            // If there is an error, we log it and set the todos to null
+            .catch(error => {
+                console.error("Error fetching todos:", error);
+                todoList.todos = null;
+            })
+            .finally(() => {
+                // If the todos are null, we log a message
+                if (todoList.todos === null) {
+                    console.log("No todos found");
+                    // Add some user-friendly feedback to the DOM.
+                    const feedbackElement = createAndAppendElement(document.body, "p", {
+                        class: "feedback",
+                        id: "feedback"
+                    }, ["No todos found"]);
+                }
+            });
+
+    </script>
+</body>
+
+    
+
+</html>
