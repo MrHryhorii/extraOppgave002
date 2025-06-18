@@ -10,29 +10,19 @@ body{
     flex-direction: column;
 }
 
-.todo-ul{
-    display: flex;
-}
-
-.todo-li{
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.userId-td, .id-td, .completed-td{
+.userId-td, .id-td, .completed-td, h1{
     text-align: center;
 } 
 
-h1{
-    text-align: center;
-    margin: 16px 16px;
-}
-
-table{
+h1, table{
     margin: 16px 16px;
 }
 
 th, td{
     padding: 2px 2px;
     border-bottom: 2px solid darkgray;
+}
+
+table{
+    margin-bottom: 64px;
 }
