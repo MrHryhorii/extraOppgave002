@@ -36,6 +36,10 @@
         todoList.fetchTodos()
             .then(todos => {
 
+                const h1 = document.createElement("h1");
+                h1.innerText = "To-Do list";
+                document.body.appendChild(h1);
+                //
                 const todo_table = document.createElement("table");
                 //
                 const todo_tr = document.createElement("tr");
