@@ -32,6 +32,7 @@ function prevPage(){
 }
 
 function renderPage(){
+    // get part of array
     const pageData = getPageData(todoList.todos, page, page_size);
     // Clear body
     clearBodyElement();
@@ -67,7 +68,7 @@ function renderPage(){
     // Fill table
     for (const todo of pageData) {
 
-        console.log(todo);
+        //console.log(todo);
         // ... Add the todo-entry to the DOM here!
         const table_row = document.createElement("tr");
         // create row
@@ -90,6 +91,12 @@ function renderPage(){
         // status
         const todo_td_completed = document.createElement("td");
         todo_td_completed.classList.add("completed-td");
+        if(todo.completed){
+            todo_td_completed.classList.add("green_back");
+        }
+        else{
+            todo_td_completed.classList.add("red_back");
+        }
         todo_td_completed.innerText = todo.completed;
         table_row.appendChild(todo_td_completed);
 
