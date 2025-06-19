@@ -41,7 +41,7 @@ tr:last-of-type td{
 }
 
 table{
-    margin-bottom: 64px;
+    margin-bottom: 24px;
 
     background-color:ghostwhite;
     border-radius: 10px;
@@ -52,4 +52,6 @@ table{
 .controls{
     display: flex;
     justify-content: center;
+
+    margin-bottom: 64px;
 }
