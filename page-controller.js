@@ -19,7 +19,7 @@ function nextPage(){
     if (page < totalPages) 
     {
         page++;
-        //renderPage();
+        renderPage();
     }
 }
 
@@ -27,7 +27,7 @@ function prevPage(){
     if (page > 1) 
     {
         page--;
-        //renderPage();
+        renderPage();
     }
 }
 
@@ -96,17 +96,25 @@ function renderPage(){
     // Create buttons
     const controls = document.createElement("div");
     controls.classList.add("controls");
-
+    //
     const btn_prev = document.createElement("button");
     btn_prev.innerText = "Prev";
-    btn_prev.onclick = () => {prevPage();}
+    btn_prev.onclick = () => {
+        prevPage();
+    }
     controls.appendChild(btn_prev);
-
+    //
+    const page_show = document.createElement("p");
+    page_show.innerText = page;
+    controls.appendChild(page_show);
+    //
     const btn_next = document.createElement("button");
     btn_next.innerText = "Next";
-    btn_prev.onclick = () => {nextPage();}
+    btn_next.onclick = () => {
+        nextPage();
+    }
     controls.appendChild(btn_next);
-
+    //
     document.body.appendChild(controls);
 
 }
