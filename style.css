@@ -48,3 +48,8 @@ table{
 
     box-shadow: 0px 0px 4px;
 }
+
+.controls{
+    display: flex;
+    justify-content: center;
+}
