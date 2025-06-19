@@ -56,6 +56,12 @@ table{
     margin-bottom: 64px;
 }
 
+.controls p{
+    text-align: center;
+    min-width: fit-content;
+    width: 32px;
+}
+
 th:nth-of-type(1){
     width: 5%;
 }
@@ -70,4 +76,19 @@ th:nth-of-type(3){
 
 th:nth-of-type(4){
     width: 10%;
+}
+
+button{
+    min-width: fit-content;
+    min-height: fit-content;
+    width: 64px;
+    height: 24px;
+    text-align: center;
+    border-radius: 10px;
+
+    transition-duration: 0.2s
+}
+
+button:hover{
+    box-shadow: 0px 0px 4px;
 }

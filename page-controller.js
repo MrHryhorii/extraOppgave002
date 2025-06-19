@@ -1,4 +1,4 @@
-var page = 1;
+let page = 1;
 const page_size = 10;
 
 
